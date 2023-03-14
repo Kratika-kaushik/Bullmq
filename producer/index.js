@@ -1,6 +1,3 @@
-// const express = require('express');
-// const app = express();
-// const bodyParser = require('body-parser');
 const fastify=require('fastify')({logger:true})
 const { createNewOrder } = require('./queues');
 
@@ -25,7 +22,7 @@ fastify.post("/order", async (request, response) => {
     response.send(resposeBody)
 })
 
-fastify.listen({port:3000}, (err) => {
+fastify.listen({port:3005}, (err) => {
     if (err) {
         console.log(err);
     } else {
